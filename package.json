@@ -9,7 +9,8 @@
     "dev": "concurrently -n api,web -c blue,green \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
     "build": "npm run build --prefix frontend",
     "build:prod": "npm install --prefix backend --omit=dev && npm install --prefix frontend --include=dev && npm run build",
-    "start": "npm start --prefix backend"
+    "start": "npm start --prefix backend",
+    "test": "npm test --prefix backend"
   },
   "devDependencies": {
     "concurrently": "^10.0.5"
