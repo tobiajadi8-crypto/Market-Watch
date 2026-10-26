@@ -1,0 +1,16 @@
+# Render Blueprint: one free web service that runs the Express API and serves the React build.
+services:
+  - type: web
+    # Kept as "stock-dashboard" so Render keeps the existing service and URL. The app itself is Market Watch.
+    name: stock-dashboard
+    runtime: node
+    plan: free
+    buildCommand: npm run build:prod
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # Optional free key from https://finnhub.io for P/E, EPS, beta, etc. on cloud hosts.
+      - key: FINNHUB_API_KEY
+        sync: false

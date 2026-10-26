@@ -1,0 +1,22 @@
+{
+  "name": "market-watch-backend",
+  "version": "1.0.0",
+  "description": "Express API for Market Watch",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon --watch src src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "market-watch": "file:..",
+    "yahoo-finance2": "^4.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
